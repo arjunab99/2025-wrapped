@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our 2025 Wrapped 💕</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --pink: #ffd6e7;
+            --lavender: #e6d7ff;
+            --baby-blue: #d7f0ff;
+            --peach: #ffddd7;
+            --soft-pink: #ffb8d9;
+            --text-color: #5a4a72;
+            --shadow: rgba(0, 0, 0, 0.05);
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            color: var(--text-color);
+            background-color: #fff9fd;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        .cursive {
+            font-family: 'Pacifico', cursive;
+        }
+
+        /* Floating hearts animation */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            color: var(--soft-pink);
+            opacity: 0.6;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        /* Sparkle animation */
+        .sparkle {
+            position: absolute;
+            font-size: 12px;
+            color: #ffd166;
+            animation: sparkle 2s infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Container and section styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        /* Hero section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--pink) 0%, var(--lavender) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #ff5c8d;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            font-weight: 500;
+            color: #7a5c8d;
+        }
+
+        .big-heart {
+            font-size: 100px;
+            color: #ff5c8d;
+            margin-bottom: 30px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 10px 30px var(--shadow);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--soft-pink);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, var(--pink), var(--lavender), var(--baby-blue), var(--peach));
+        }
+
+        .card h3 {
+            color: #ff5c8d;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* Section styling */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #ff5c8d;
+            display: inline-block;
+            padding: 0 20px;
+            background: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--pink), var(--lavender), var(--baby-blue), var(--peach));
+            z-index: 0;
+        }
+
+        /* Beginning section */
+        .beginning {
+            background-color: var(--baby-blue);
+        }
+
+        .beginning-content {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .beginning-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .beginning-img {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .beginning-img img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Moments section */
+        .moments {
+            background-color: var(--pink);
+        }
+
+        .moments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .moment-card {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .moment-img {
+            width: 100%;
+            height: 200px;
+            border-radius: 20px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        /* Why I love you section */
+        .reasons {
+            background-color: var(--lavender);
+        }
+
+        .reasons-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .reason-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+        }
+
+        .reason-icon {
+            font-size: 24px;
+            margin-right: 20px;
+            color: #ff5c8d;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* Numbers section */
+        .numbers {
+            background-color: var(--peach);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .stat-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #ff5c8d;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ff5c8d;
+            margin-bottom: 10px;
+        }
+
+        /* Love letter section */
+        .love-letter {
+            background-color: var(--soft-pink);
+            padding: 60px 0;
+        }
+
+        .letter-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border: 2px dashed #ff5c8d;
+        }
+
+        .letter-content::before {
+            content: '💌';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40px;
+            background: white;
+            padding: 0 20px;
+        }
+
+        /* Ending section */
+        .ending {
+            text-align: center;
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--lavender) 0%, var(--pink) 100%);
+        }
+
+        .ending-quote {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #ff5c8d;
+            font-weight: 600;
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .big-heart {
+                font-size: 70px;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .letter-content {
+                padding: 30px 20px;
+            }
+            
+            .ending-quote {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .reason-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .reason-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+.bubble {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: rgba(255, 182, 217, 0.6); /* soft pink */
+    border-radius: 50%;
+    pointer-events: none;
+    animation: rise 6s linear infinite;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(0.5);
+        opacity: 0;
+    }
+}
+
+    </style>
+</head>
+<body>
+<div class="music-bubble" id="musicBubble">
+</div>
+<audio id="bgMusic" loop>
+    <source src="music/Whentheriveriscalling.mp3" type="audio/mpeg">
+</audio>
+    <!-- Floating hearts background -->
+    <div class="floating-hearts" id="hearts-container"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container fade-in">
+            <div class="big-heart">💖</div>
+            <h1>Our 2025 Wrapped 💕</h1>
+            <p>From July to Forever ✨</p>
+            <div class="sparkle" style="top: 20%; left: 15%;">✨</div>
+            <div class="sparkle" style="top: 30%; right: 20%;">⭐</div>
+            <div class="sparkle" style="bottom: 25%; left: 20%;">🎀</div>
+        </div>
+    </section>
+
+    <!-- Our Beginning Section -->
+    <section class="beginning">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Beginning</h2>
+            </div>
+            <div class="beginning-content fade-in">
+                <div class="beginning-text">
+                    <div class="card">
+                        <h3>July 2025</h3>
+                        <p class="cursive" style="font-size: 1.5rem; margin-bottom: 20px; color: #ff5c8d;">
+                            "July wasn't just a month... it was the start of us 💕"
+                        </p>
+                        <p>That warm summer day when our eyes first met, and everything changed. I still remember the way your smile lit up the room and how my heart knew instantly that this was different. From our first conversation that lasted hours to our first date where time seemed to stand still, July 2025 marked the beginning of our beautiful story.</p>
+                        <p>Every moment since has been a page in the most wonderful book, with you as my favorite character and our love as the plot that keeps getting better with each chapter.</p>
+                    </div>
+                </div>
+                <div class="beginning-img fade-in">
+                    <!-- Image placeholder for our first memory -->
+                   <img src="images/july.jpg" alt="Our first memory - July 2025">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Moments We Loved Section -->
+    <section class="moments">
+        <div class="container">
+            <div class="section-title">
+                <h2>Moments We Loved</h2>
+            </div>
+            <div class="moments-grid">
+                <div class="card moment-card fade-in">
+                    <img class="moment-img" src="images/memory1.jpg" alt="Laughing together">
+                    <h3>Laughing Till Our Stomachs Hurt 😂</h3>
+                    <p>Those moments when we couldn't stop laughing at the silliest things, tears streaming down our faces, completely lost in joy.</p>
+                </div>
+                
+<div class="card moment-card fade-in">
+    <img class="moment-img" src="images/memory2.jpg" alt="Driving lessons">
+    <h3>Driving Lessons Gone Wild 🚗📸</h3>
+    <p>I was trying to teach you how to drive, but you were too busy taking pictures and videos to prove who's the real boss — a total baddie behind the wheel, and honestly, it looked adorable.</p>
+</div>
+
+                
+<div class="card moment-card fade-in">
+    <img class="moment-img" src="images/memory3.jpg" alt="Shopping day photo">
+    <h3>Shopping… Kinda 🛍️😂</h3>
+    <p>We went out for shopping, found a South Korean restaurant behind us, didn’t even eat there — just posed for pictures. Zero shopping done, but somehow the photo turned out insanely beautiful.</p>
+</div>
+
+                
+<div class="card moment-card fade-in">
+    <img class="moment-img" src="images/memory4.jpg" alt="Theobroma date">
+    <h3>Theobroma Chaos ☕🍰</h3>
+    <p>That day at Theobroma when you started acting stupid on purpose, making weird faces, saying nonsense, and somehow still being the cutest person in the room.</p>
+</div>
+
+<div class="card moment-card fade-in">
+    <img class="moment-img" src="images/memory5.jpg" alt="Fancy restaurant fun">
+    <h3>Fancy Restaurant Shenanigans 🍽️💸</h3>
+    <p>Took you to a fancy restaurant, but we spent more time mimicking how lavish people eat than actually eating. Me? Almost had a heart attack when the bill came. Totally worth it for the laughs!</p>
+</div>
+
+<div class="card moment-card fade-in">
+    <img class="moment-img" src="images/memory6.jpg" alt="Boyfriend-only photo">
+    <h3>Boyfriend-Only Vibes 😏❤️</h3>
+    <p>Because boyfriends secretly love those cheeky, “dirty” photos of their girlfriends. Don’t worry, this one’s our little secret 😉.</p>
+</div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why I Love You Section -->
+    <section class="reasons">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why I Love You</h2>
+            </div>
+            <div class="reasons-list">
+                <div class="reason-item fade-in">
+                    <div class="reason-icon">💖</div>
+                    <div>
+                        <h3>Your Kind Heart</h3>
+                        <p>The way you care for others, your empathy and compassion that shines through in everything you do.</p>
+                    </div>
+                </div>
+                
+                <div class="reason-item fade-in">
+                    <div class="reason-icon">⭐</div>
+                    <div>
+                        <h3>Your Beautiful Smile</h3>
+                        <p>How your smile lights up any room and makes even the darkest days feel bright and hopeful.</p>
+                    </div>
+                </div>
+                
+                <div class="reason-item fade-in">
+                    <div class="reason-icon">🎀</div>
+                    <div>
+                        <h3>The Way You Listen</h3>
+                        <p>You don't just hear my words, you listen to my heart, understanding what I mean even when I struggle to say it.</p>
+                    </div>
+                </div>
+                
+                <div class="reason-item fade-in">
+                    <div class="reason-icon">✨</div>
+                    <div>
+                        <h3>Your Dreams & Ambitions</h3>
+                        <p>Watching you pursue your passions with determination and grace inspires me to be a better person every day.</p>
+                    </div>
+                </div>
+                
+                <div class="reason-item fade-in">
+                    <div class="reason-icon">🌸</div>
+                    <div>
+                        <h3>How You Make Me Feel</h3>
+                        <p>With you, I feel completely myself—loved, accepted, and cherished exactly as I am.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2025 In Numbers Section -->
+    <section class="numbers">
+        <div class="container">
+            <div class="section-title">
+                <h2>2025 In Numbers</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="card stat-card fade-in">
+                    <div class="stat-icon">💬</div>
+                    <div class="stat-number">Countless</div>
+                    <h3>Texts Exchanged</h3>
+                    <p>From good morning messages to late-night conversations, every word a reminder of our connection.</p>
+                </div>
+                
+                <div class="card stat-card fade-in">
+                    <div class="stat-icon">😂</div>
+                    <div class="stat-number">Infinite</div>
+                    <h3>Laughs Shared</h3>
+                    <p>More laughter than we could ever count, each giggle and chuckle a memory to treasure forever.</p>
+                </div>
+                
+                <div class="card stat-card fade-in">
+                    <div class="stat-icon">🌻</div>
+                    <div class="stat-number">182+</div>
+                    <h3>Days Together</h3>
+                    <p>From July to December, each day has been a gift filled with love, growth, and beautiful moments.</p>
+                </div>
+                
+                <div class="card stat-card fade-in">
+                    <div class="stat-icon">💖</div>
+                    <div class="stat-number">1 Perfect</div>
+                    <h3>Love Story</h3>
+                    <p>One incredible connection that grows stronger with each passing day, more beautiful than we imagined.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Letter Section -->
+    <section class="love-letter">
+        <div class="container">
+            <div class="letter-content fade-in">
+                <h2 style="text-align: center; color: #ff5c8d; margin-bottom: 30px;">My Love Letter to You</h2>
+                <p style="margin-bottom: 20px;">My Bobla Ann,</p>
+                <p style="margin-bottom: 20px;">As I look back on our 2025 together, my heart overflows with gratitude for every moment we've shared. From our first hesitant hello in July to the comfortable silences we now share, this year has been the most beautiful of my life.</p>
+                <p style="margin-bottom: 20px;">You've shown me what true love feels like—not just the grand gestures, but the quiet moments in between. The way you remember how I take my coffee, how you squeeze my hand when I'm nervous, how you believe in me even when I doubt myself.</p>
+                <p style="margin-bottom: 20px;">With you, I've learned that love isn't about finding the perfect person, but seeing an imperfect person perfectly. You are my safe place, my greatest adventure, and my most beautiful surprise all wrapped into one.</p>
+                <p style="margin-bottom: 20px;">As we move forward from our 2025 wrapped, I can't wait to unwrap all the tomorrows we'll share. Here's to countless more sunsets, morning coffees, kitchen dances, and laughter that fills our home.</p>
+                <p style="margin-bottom: 20px;">All my love, forever and always,</p>
+                <p class="cursive" style="font-size: 1.3rem; color: #ff5c8d; text-align: right;">Your forever person 💕</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ending Section -->
+    <section class="ending">
+        <div class="container">
+            <div class="big-heart" style="margin-bottom: 30px;">💖</div>
+            <p class="ending-quote fade-in">"If July was the beginning, forever is the plan 💍"</p>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 40px; color: #7a5c8d;" class="fade-in">
+                Thank you for the most beautiful half-year of my life. Here's to wrapping up 2025 with love and stepping into forever together.
+            </p>
+            <div class="sparkle" style="top: 60%; left: 20%;">✨</div>
+            <div class="sparkle" style="top: 50%; right: 15%;">🎀</div>
+            <div class="sparkle" style="bottom: 30%; left: 10%;">⭐</div>
+        </div>
+    </section>
+
+    <script>
+        // Create floating hearts
+        const heartsContainer = document.getElementById('hearts-container');
+        const heartCount = 25;
+        
+        for (let i = 0; i < heartCount; i++) {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️';
+            
+            // Random position
+            const left = Math.random() * 100;
+            const top = Math.random() * 100;
+            const delay = Math.random() * 5;
+            const size = Math.random() * 15 + 10;
+            
+            heart.style.left = `${left}%`;
+            heart.style.top = `${top}%`;
+            heart.style.animationDelay = `${delay}s`;
+            heart.style.fontSize = `${size}px`;
+            
+            heartsContainer.appendChild(heart);
+        }
+        
+        // Scroll animation for fade-in elements
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+        
+        // Initial check on load
+        window.addEventListener('load', fadeInOnScroll);
+        
+        // Check on scroll
+        window.addEventListener('scroll', fadeInOnScroll);
+        
+        // Add some sparkles dynamically
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            // Add 2-3 sparkles to each section
+            const sparkleCount = Math.floor(Math.random() * 2) + 2;
+            
+            for (let i = 0; i < sparkleCount; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.innerHTML = ['✨', '⭐', '🎀'][Math.floor(Math.random() * 3)];
+                
+                // Random position within section
+                const left = Math.random() * 80 + 10;
+                const top = Math.random() * 80 + 10;
+                const delay = Math.random() * 2;
+                
+                sparkle.style.left = `${left}%`;
+                sparkle.style.top = `${top}%`;
+                sparkle.style.animationDelay = `${delay}s`;
+                
+                section.style.position = 'relative';
+                section.appendChild(sparkle);
+            }
+        });
+
+          // Unmute on first click
+  document.body.addEventListener('click', () => {
+      const audio = document.getElementById('bgMusic');
+      audio.muted = false;
+      audio.play();
+  }, { once: true });
+
+    const music = document.getElementById('bgMusic');
+  const bubble = document.getElementById('musicBubble');
+
+  // Play on click
+  bubble.addEventListener('click', () => {
+    if (music.paused) {
+      music.play();
+      bubble.style.animation = 'bounce 1s infinite';
+    } else {
+      music.pause();
+      bubble.style.animation = 'none';
+    }
+  });
+
+  const bubbleCount = 300; // number of bubbles
+for (let i = 0; i < bubbleCount; i++) {
+    const bubble = document.createElement('div');
+    bubble.className = 'bubble';
+    
+    // Random starting position
+    bubble.style.left = Math.random() * 100 + '%';
+    bubble.style.bottom = Math.random() * 50 + 'px';
+    bubble.style.width = 10 + Math.random() * 20 + 'px';
+    bubble.style.height = bubble.style.width;
+    bubble.style.animationDuration = 4 + Math.random() * 4 + 's';
+    
+    document.body.appendChild(bubble);
+}
+
+
+    </script>
+</body>
+</html>
